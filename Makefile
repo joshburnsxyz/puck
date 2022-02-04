@@ -2,7 +2,7 @@ GOX := $(shell which go)
 BIN := puckd
 PREFIX := /usr
 
-puckd:
+puckd: vendor
 	$(GOX) build \
 		-o $(BIN) \
 		-x
