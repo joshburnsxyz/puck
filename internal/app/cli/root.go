@@ -12,7 +12,7 @@ func ExecuteRootCmd() {
 		Short: "Notifications for commands",
 	}
 
-	//c.AddCommand(NewCmd())
+	c.AddCommand(WatchCmd())
 
 	if err := c.Execute(); err != nil {
 		log.Fatal().Err(err)
