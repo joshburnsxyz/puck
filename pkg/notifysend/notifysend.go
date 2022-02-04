@@ -8,7 +8,6 @@ import (
 
 type NotificationCmd struct{
 	Expire: int
-	Urgency: string
 	TitleText: string
 	BodyText: string
 }
