@@ -9,3 +9,15 @@ puckd:
 clean:
 	@rm -rf vendor
 	@rm -f $(BIN)
+
+vendor:
+	go mod vendor
+
+install:
+	cp -f $(BIN) $(PREFIX)/bin/$(BIN)
+
+uninstall:
+	rm -f $(PREFIX)/bin/$(BIN)
+
+
+.PHONY: clean install
