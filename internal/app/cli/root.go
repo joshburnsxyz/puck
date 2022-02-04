@@ -8,7 +8,7 @@ import (
 // ExecuteRootCmd prepares all CLI commands
 func ExecuteRootCmd() {
 	c := cobra.Command{
-		Use: "puckd",
+		Use: "puck",
 		Short: "Notifications for commands",
 	}
 
