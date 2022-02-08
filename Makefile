@@ -2,7 +2,7 @@ GOX := $(shell which go)
 BIN := puck
 PREFIX := /usr
 
-puck: vendor
+puck: modinit
 	$(GOX) build \
 		-o $(BIN) \
 		-x
@@ -12,6 +12,11 @@ clean:
 
 vendor:
 	go mod vendor
+	
+modinit:
+	@rm -rf vendor
+	go mod tidy
+	go mod vendor
 
 install:
 	cp -f $(BIN) $(PREFIX)/bin/$(BIN)
@@ -20,4 +25,4 @@ uninstall:
 	rm -f $(PREFIX)/bin/$(BIN)
 
 
-.PHONY: clean install
+.PHONY: clean install modinit
