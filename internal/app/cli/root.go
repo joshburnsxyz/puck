@@ -13,7 +13,9 @@ func ExecuteRootCmd() {
 	}
 
 	c.AddCommand(WatchCmd())
-
+	c.AddCommand(TestCmd())
+	c.AddCommand(BackgroundCmd())
+	
 	if err := c.Execute(); err != nil {
 		log.Fatal().Err(err)
 	}
