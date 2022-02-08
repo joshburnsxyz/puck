@@ -16,4 +16,23 @@ $ puck watch dd if=./example.iso of=/dev/sdb
 
 ## Installation
 
+### From Source
+
+#### 1. Download Source Code
+```console
+$ git clone https://github.com/joshburnsxyz/puck
+```
+
+#### 2. Run Build and Install Scripts
+```console
+$ make
+$ sudo make install
+```
+
+#### 3. Ensure Installation Worked
+```console
+$ puck --help
+```
+### Automatic Installation
+
 __FIXME__
