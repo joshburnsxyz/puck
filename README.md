@@ -32,6 +32,7 @@ $ sudo make install
 #### 3. Ensure Installation Worked
 ```console
 $ puck --help
+$ puck test
 ```
 ### Automatic Installation
 
