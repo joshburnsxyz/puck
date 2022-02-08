@@ -35,4 +35,8 @@ $ puck --help
 ```
 ### Automatic Installation
 
-__FIXME__
+> Requires `curl` to be installed on your system
+
+```console
+$ curl -sf https://gobinaries.com/github.com/joshburnsxyz/puck | sh
+```
