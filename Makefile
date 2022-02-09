@@ -3,7 +3,7 @@ BIN := puck
 PREFIX := /usr
 
 puck: modinit
-	$(GOX) build \
+	$(GOX) build ./cmd \
 		-o $(BIN) \
 		-x
 clean:
