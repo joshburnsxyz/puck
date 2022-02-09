@@ -7,9 +7,9 @@ import (
 )
 
 type NotificationCmd struct{
-	Expire: int
-	TitleText: string
-	BodyText: string
+	Expire int
+	TitleText string
+	BodyText string
 }
 
 func New(title: string, body: string) *NotificationCmd {
