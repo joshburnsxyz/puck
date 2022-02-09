@@ -16,7 +16,7 @@ func New(title string, body string) *NotificationCmd {
 	return &NotificationCmd{
 		Expire: 5000,
 		TitleText: title,
-		BodyText: body
+		BodyText: body,
 	}
 }
 
