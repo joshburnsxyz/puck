@@ -15,6 +15,8 @@ func WatchCmd() *cobra.Command {
 		Args: cobra.ArbitraryArgs,
 		Short:   "run a given command and notify when its done",
 		Run: func(cmd *cobra.Command, args []string) {
+			cmdBinPath := args[0]
+			_, args = args[0], args[1:]
 			cmdN := exec.Command(args...)
 			err := cmdN.Run()
 			if err != nil {
