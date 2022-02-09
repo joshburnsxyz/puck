@@ -1,6 +1,8 @@
 package cli
 
 import (
+	"os/exec"
+	"fmt"
 	"github.com/spf13/cobra"
 	"github.com/joshburnsxyz/puck/pkg/notifysend"
 )
@@ -13,8 +15,8 @@ func WatchCmd() *cobra.Command {
 		Args: cobra.ArbitraryArgs,
 		Short:   "run a given command and notify when its done",
 		Run: func(cmd *cobra.Command, args []string) {
-			cmd := exec.Command(args...)
-			err := cmd.Run()
+			cmdN := exec.Command(args...)
+			err := cmdN.Run()
 			if err != nil {
 				n := notifysend.New("ERROR", err)
 				n.Send()
