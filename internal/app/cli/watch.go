@@ -20,7 +20,7 @@ func WatchCmd() *cobra.Command {
 			cmdN := exec.Command(cmdBinPath, args...)
 			err := cmdN.Run()
 			if err != nil {
-				n := notifysend.New("ERROR", string(err))
+				n := notifysend.New("ERROR", err.Error())
 				n.Send()
 				panic(err)
 			} else {
