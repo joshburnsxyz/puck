@@ -3,9 +3,10 @@ BIN := puck
 PREFIX := /usr
 
 puck: modinit
-	$(GOX) build ./cmd \
+	$(GOX) build \
 		-o $(BIN) \
-		-x
+		-x \
+		./cmd
 clean:
 	@rm -rf vendor
 	@rm -f $(BIN)
