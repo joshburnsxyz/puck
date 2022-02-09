@@ -2,8 +2,6 @@ package notifysend
 
 import (
 	"os/exec"
-	"github.com/rs/zerolog/log"
-	"bytes"
 )
 
 type NotificationCmd struct{
@@ -21,7 +19,7 @@ func New(title string, body string) *NotificationCmd {
 }
 
 func (n *NotificationCmd) Send() {
-	cmd := exec.Command("notify-send", "-t", n.Expire, n.TitleText, n.BodyText)
+	cmd := exec.Command("notify-send", "-t", string(n.Expire), n.TitleText, n.BodyText)
 	err := cmd.Run()
 	if err != nil {
 		panic(err)
