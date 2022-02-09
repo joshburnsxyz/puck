@@ -12,7 +12,7 @@ type NotificationCmd struct{
 	BodyText string
 }
 
-func New(title: string, body: string) *NotificationCmd {
+func New(title string, body string) *NotificationCmd {
 	return &NotificationCmd{
 		Expire: 5000,
 		TitleText: title,
