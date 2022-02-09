@@ -17,7 +17,7 @@ func WatchCmd() *cobra.Command {
 		Run: func(cmd *cobra.Command, args []string) {
 			cmdBinPath := args[0]
 			_, args = args[0], args[1:]
-			cmdN := exec.Command(args...)
+			cmdN := exec.Command(cmdBinPath, args...)
 			err := cmdN.Run()
 			if err != nil {
 				n := notifysend.New("ERROR", err)
