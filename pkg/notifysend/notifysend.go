@@ -4,17 +4,17 @@ import (
 	"os/exec"
 )
 
-type NotificationCmd struct{
-	Expire int
+type NotificationCmd struct {
+	Expire    int
 	TitleText string
-	BodyText string
+	BodyText  string
 }
 
 func New(title string, body string) *NotificationCmd {
 	return &NotificationCmd{
-		Expire: 5000,
+		Expire:    5000,
 		TitleText: title,
-		BodyText: body,
+		BodyText:  body,
 	}
 }
 

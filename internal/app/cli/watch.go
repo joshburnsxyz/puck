@@ -1,10 +1,10 @@
 package cli
 
 import (
-	"os/exec"
 	"fmt"
-	"github.com/spf13/cobra"
 	"github.com/joshburnsxyz/puck/pkg/notifysend"
+	"github.com/spf13/cobra"
+	"os/exec"
 )
 
 // WatchCmd() implements the watch command.
@@ -12,7 +12,7 @@ func WatchCmd() *cobra.Command {
 	return &cobra.Command{
 		Use:     "watch",
 		Aliases: []string{"w"},
-		Args: cobra.ArbitraryArgs,
+		Args:    cobra.ArbitraryArgs,
 		Short:   "run a given command and notify when its done",
 		Run: func(cmd *cobra.Command, args []string) {
 			cmdBinPath := args[0]

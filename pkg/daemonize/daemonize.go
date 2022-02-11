@@ -1,10 +1,10 @@
 package daemonize
 
 import (
+	"errors"
 	"log"
 	"os"
 	"os/exec"
-	"errors"
 )
 
 func Cmd(inp exec.Cmd) errors.Error {
