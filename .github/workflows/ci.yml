@@ -18,9 +18,6 @@ jobs:
       with:
         go-version: 1.17
 
-    - name: Initialize Go Modules
-      run: go mod init github.com/joshburnsxyz/puck
-
     - name: Pull dependencies
       run: make modinit
       
