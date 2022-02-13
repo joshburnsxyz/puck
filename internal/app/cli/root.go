@@ -10,7 +10,7 @@ func ExecuteRootCmd() {
 	c := cobra.Command{
 		Use:   "puck",
 		Short: "Notifications for commands",
-		Version: "1.0"
+		Version: "1.0",
 	}
 
 	c.AddCommand(WatchCmd())
